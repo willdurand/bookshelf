@@ -1,0 +1,51 @@
+.isbn {
+	text-align: right;
+	min-width: 11em;
+	max-width: 11em;
+	width: 11em;
+}
+
+.title {
+	min-width: 30em;
+}
+
+.authors {
+	min-width: 15em;
+}
+
+footer {
+	text-align: center;
+}
+
+.toolbox {
+	display: grid;
+	grid-template-columns: 1fr auto auto;
+
+	button {
+		margin-left: 1em;
+		margin-bottom: 1em;
+	}
+}
+
+#stream {
+	display: none;
+	max-width: 100%;
+	margin: 1em auto;
+}
+
+#copy[disabled] {
+	opacity: initial;
+}
+
+:popover-open {
+	position: absolute;
+	inset: unset;
+	bottom: 1em;
+	right: 1em;
+	max-width: 40vw;
+	background-color: black;
+	color: white;
+	border: 0;
+	border-radius: 10px;
+	padding: 5px 10px;
+}
