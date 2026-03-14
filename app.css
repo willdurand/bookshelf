@@ -44,6 +44,12 @@
   }
 }
 
+html.is-ha {
+  h2 {
+    display: none;
+  }
+}
+
 .isbn {
   text-align: right;
   min-width: 11em;
