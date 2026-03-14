@@ -1,51 +1,101 @@
+[data-theme=light],
+:root:not([data-theme=dark]),
+:host:not([data-theme=dark]) {
+  --pico-color: #141414;
+  --pico-code-color: #141414;
+  --pico-form-element-color: #141414;
+
+  --pico-background-color: #fafafa;
+
+  --pico-primary: #0288d1;
+  --pico-primary-background: #0288d1;
+
+  --pico-border-color: #e4e4e4;
+  --pico-code-border-color: #e4e4e4;
+  --pico-form-element-border-color: #e4e4e4;
+  --pico-table-border-color: #e4e4e4;
+
+  --pico-secondary: #5e5e5e;
+
+  --pico-code-background-color: #fff;
+  --pico-form-element-background-color: #fff;
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --pico-color: #e1e1e1;
+    --pico-code-color: #e1e1e1;
+    --pico-form-element-color: #e1e1e1;
+
+    --pico-background-color: #111111;
+
+    --pico-primary: #0288d1;
+    --pico-primary-background: #0288d1;
+
+    --pico-border-color: rgba(255, 255, 255, 0.12);
+    --pico-code-border-color: rgba(255, 255, 255, 0.12);
+    --pico-form-element-border-color: rgba(255, 255, 255, 0.12);
+    --pico-table-border-color: rgba(255, 255, 255, 0.12);
+
+    --pico-secondary: rgb(28, 28, 28);
+
+    --pico-code-background-color: rgb(28, 28, 28);
+    --pico-form-element-background-color: rgb(28, 28, 28);
+  }
+}
+
 .isbn {
-	text-align: right;
-	min-width: 11em;
-	max-width: 11em;
-	width: 11em;
+  text-align: right;
+  min-width: 11em;
+  max-width: 11em;
+  width: 11em;
 }
 
 .title {
-	min-width: 30em;
+  min-width: 30em;
 }
 
 .authors {
-	min-width: 15em;
+  min-width: 15em;
+}
+
+code {
+  border: 1px solid var(--pico-code-border-color);
 }
 
 footer {
-	text-align: center;
+  text-align: center;
 }
 
 .toolbox {
-	display: grid;
-	grid-template-columns: 1fr auto auto;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
 
-	button {
-		margin-left: 1em;
-		margin-bottom: 1em;
-	}
+  button {
+    margin-left: 1em;
+    margin-bottom: 1em;
+  }
 }
 
 #stream {
-	display: none;
-	max-width: 100%;
-	margin: 1em auto;
+  display: none;
+  max-width: 100%;
+  margin: 1em auto;
 }
 
 #copy[disabled] {
-	opacity: initial;
+  opacity: initial;
 }
 
 :popover-open {
-	position: absolute;
-	inset: unset;
-	bottom: 1em;
-	right: 1em;
-	max-width: 40vw;
-	background-color: black;
-	color: white;
-	border: 0;
-	border-radius: 10px;
-	padding: 5px 10px;
+  position: absolute;
+  inset: unset;
+  bottom: 1em;
+  right: 1em;
+  max-width: 40vw;
+  background-color: black;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  padding: 5px 10px;
 }
